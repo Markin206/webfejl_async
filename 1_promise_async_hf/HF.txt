@@ -1,0 +1,29 @@
+
+1.feladat:
+random_people_with_cars
+
+Osztályok:
+	manager
+	view
+	form:
+	-4 gomb:
+		-1. gomb feltétel: életkora osztható 3-mal, autók: White 
+		-2. gomb feltétel: azon nők amelyek Coupe autója van
+		-3. gomb feltétel: Az "A" betűvel kezdödő emberek akiknek autója Bush
+		-4. gomb feltétel: Silver SUV rendelkező emberek
+	-valósítsd meg a manager filter függvényét amely PROMISEL tér vissza tartalmazza a felételeknek megfelelő elemeket
+	-manageren keresztül kommunikál a view osztályal egy callback segítségével egy filter feloldásában
+	-csak az emberek nevét és életkorát kell kiírni
+	-ha nincs a feltételnek megfelelő elem akkor jelenítse meg a filteréből visszajött hibásan visszajövő üzenet a view callbackal. viewhez használhatsz diveket
+
+2.feladat:
+Dataview egy rendererror függvényt definiáljunk
+amely 1 error paramétere van és a privát div tulajdonságnak beállítja szövegként a paramétert
+
+definiálunk a szervíznek egy init_invaild függvényt amely timeout-tal a promise rejetjét adja vissza
+szervíz init_invalid függvényét, a promise feloldásakor meghívjuk a view rendererrorjár
+
+szervíznek definiálunk egy realinit függvényt
+aminek 1 NUMBER paramétere van
+a függvény tőrzse hasonló a buyapple 3-hoz
+ 

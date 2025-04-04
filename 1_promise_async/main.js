@@ -6,7 +6,7 @@ const buyApple1 = (apple1 => {
     }else{
         return Promise.reject('Nincs elég alma+!');
     }
-})
+});
 
 res1 = buyApple1(4);//promise tipusu osztályt tartallmaz
 console.log(res1);
@@ -46,7 +46,11 @@ buyApple2(5).then(value => {
 });
 
 //----------------------------------------------------------timeout
-
+/**
+ * 
+ * @param {Number} apple3 
+ * @returns 
+ */
 const buyApple3 = (apple3 => {
     return new Promise((resolve, reject)=> {//böngészőbe van impletentálva (resolve, reject)
         if(apple3 < 5){
@@ -72,3 +76,33 @@ buyApple3(5).then(value => {
 }).catch(error => {
     console.log(error);
 });
+
+res2 = buyApple3(5).then(value => {console.log(value);}).catch(error => {console.log(error);});
+
+console.log(res2);
+
+
+//----------------------------------------------------------------------------------
+
+class Szerviz{
+    #data;
+    constructor(){
+        this.#data = people;
+    }
+    init(){
+        return new Promise((resolve) =>{
+            setTimeout(() => {
+                resolve(this.#data);
+            }, 3000);
+        });
+    }
+}
+
+class dataViewController{
+    #div;
+    constructor(){
+        this.#div = document.createElement('div');
+        this.#div.TextContent = "Loading";
+        document.append(this.#div);
+    }
+}
