@@ -101,8 +101,24 @@ class Szerviz{
 class dataViewController{
     #div;
     constructor(){
+        console.log();
         this.#div = document.createElement('div');
-        this.#div.TextContent = "Loading";
-        document.append(this.#div);
+        this.#div.textContent = "Loading";
+        document.body.appendChild(this.#div);
+    }
+
+    setContent(array){
+        this.#div.innerHTML = "";
+        for(const elem of array){
+            const div = document.createElement('div');
+            div.textContent = elem.name;
+            this.#div.appendChild(div);
+        }
     }
 }
+
+const serv = new Szerviz()
+const view = new dataViewController();
+serv.init().then((value) => {
+    view.setContent(value);
+})
